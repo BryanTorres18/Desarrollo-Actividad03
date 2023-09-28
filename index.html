@@ -24,10 +24,14 @@
     </header>
     <!--Contenido-->
     <main class="container py-3">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Bienvenido a LibroHub</h1>
+            <p class="lead">Adentrate al gran mundo de la lectura!</p>
+        </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <h2 class="display-5 text-secondary">Nuestros libros</h2>
-                <p class="text-center">Explora nuestra amplia selección de libros. Tenemos algo para todos los gustos.</p>
+                <p>Explora nuestra amplia selección de libros. Tenemos algo para todos los gustos.</p>
                 <!--Tabla-->
                 <table class="table">
                     <thead>
@@ -37,18 +41,49 @@
                             <th>Autor</th>
                             <th>Género</th>
                             <th>Precio</th>
+                            <th>Metodo Compra</th>
+                            <th>Comprar?</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><img></td> <!--Imagen-->
+                            <td><img src="paco_yunque_portada.jpg" alt="Descripcion" class="img-fluid"></td> <!--Imagen-->
                             <td>Paco Yunque</td>
                             <td>Cesar Vallejo</td>
                             <td>Ficcion</td>
                             <td>S/. 100</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Metodo de Compra">
+                                    <button type="button" class="btn btn-secondary">Presencial</button>
+                                    <button type="button" class="btn btn-secondary">Virtual</button>
+                                </div>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Comprar</button>
+                                <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Consulta Completada</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Hay disponibilidad se le asigno un numero de orden: 123192891. Contactenos al 932111416</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="col-md-4">
+                <div class="alert alert-success" role="alert">Exito: Se cargó todos los libros existentes.</div>
             </div>
         </div>
     </main>
