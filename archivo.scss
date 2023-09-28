@@ -1,0 +1,20 @@
+//Variable Sass
+$color-primario: #007bff;  
+
+//Sass @mixin
+@mixin estilo-borde { 
+    border: 1px solid $color-primario; 
+} 
+
+.selector { 
+    @include estilo-borde; 
+}
+
+//Sass @extend
+%estilo-compartido { 
+    color: $color-primario; 
+} 
+
+.selector { 
+    @extend %estilo-compartido; 
+}

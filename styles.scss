@@ -1,0 +1,32 @@
+//Sass @import
+@import 'archivo.scss';  
+
+//Variable Sass
+$color-primario: #007bff;  
+$color-secundario: #000000;  
+
+//Sass Nesting
+.selector { 
+    color: $color-primario; 
+    a { 
+        text-decoration: none; 
+    } 
+}  
+
+//Sass @mixin
+@mixin estilo-borde { 
+    border: 4px solid $color-secundario; 
+} 
+
+.selector { 
+    @include estilo-borde; 
+}
+
+//Sass @extend
+%estilo-compartido { 
+    color: $color-secundario; 
+} 
+
+.selector { 
+    @extend %estilo-compartido; 
+}
